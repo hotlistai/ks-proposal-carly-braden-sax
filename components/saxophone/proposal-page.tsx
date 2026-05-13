@@ -33,8 +33,6 @@ const HERO_IMAGE =
 const PREVIEW_VIDEO =
   "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov"
 
-const PERFORMANCE_VIDEO =
-  "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov"
 
 /* ------------------------------------------------------------------ */
 /*  Shared components matching the proposal visual language            */
@@ -253,18 +251,6 @@ function Experience() {
         </ul>
       </FadeIn>
 
-      {/* Performance Video */}
-      <FadeIn delay={300}>
-        <div className="mt-10">
-          <VideoPlayer src={PERFORMANCE_VIDEO} halfWidth />
-          <p
-            className="mt-4 text-sm font-light"
-            style={{ color: "rgba(255,255,255,0.4)", lineHeight: 1.7 }}
-          >
-            Live performance in action.
-          </p>
-        </div>
-      </FadeIn>
     </section>
   )
 }
