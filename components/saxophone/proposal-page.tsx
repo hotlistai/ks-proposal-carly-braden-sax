@@ -30,7 +30,7 @@ const EVENT_VENUE = config.venue || "The Reserve at Marty B's"
 const HERO_IMAGE =
   "https://blog.hotlistdigital.com/wp-content/uploads/2026/02/A1B2B3EB-5FEB-4EC6-92DD-526510F2BE85.png"
 const PREVIEW_VIDEO =
-  "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov"
+  "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/WeddingReception-1.mov"
 
 /* ------------------------------------------------------------------ */
 /*  Shared components matching the proposal visual language            */
