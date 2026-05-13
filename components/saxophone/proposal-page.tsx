@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { FadeIn } from "./fade-in"
-import { VideoPlayer } from "./video-player"
 
 /* ------------------------------------------------------------------ */
 /*  CONFIG — fill in per-client. Empty strings render as [Placeholder] */
@@ -29,10 +28,6 @@ const EVENT_VENUE = config.venue || "The Reserve at Marty B's"
 
 const HERO_IMAGE =
   "https://blog.hotlistdigital.com/wp-content/uploads/2026/02/A1B2B3EB-5FEB-4EC6-92DD-526510F2BE85.png"
-
-const PREVIEW_VIDEO =
-  "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov"
-
 
 /* ------------------------------------------------------------------ */
 /*  Shared components matching the proposal visual language            */
@@ -163,19 +158,6 @@ function Header() {
           </div>
         </FadeIn>
 
-        {/* Private Preview */}
-        <FadeIn delay={400}>
-          <div className="mt-20">
-            <SectionLabel>Private Preview</SectionLabel>
-            <VideoPlayer src={PREVIEW_VIDEO} halfWidth />
-            <p
-              className="mt-4 text-sm font-light"
-              style={{ color: "rgba(255,255,255,0.4)", lineHeight: 1.7 }}
-            >
-              A look at how the evening feels when everything moves as one.
-            </p>
-          </div>
-        </FadeIn>
       </div>
     </header>
   )
