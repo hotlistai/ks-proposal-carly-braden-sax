@@ -11,7 +11,7 @@ const config = {
   contactEmail: "hello@knoxsignature.com",
   websiteUrl: "https://knoxsignature.com",
   packageName: "Ceremony + Cocktail Hour + Reception",
-  packagePrice: "$2,750",
+  packagePrice: "2,750",
   coupleName: "Carly & Braden",
   eventDate: "December 4, 2026",
   venue: "The Reserve at Marty B's",
@@ -407,7 +407,7 @@ function Investment() {
                 color: "rgba(255,255,255,0.92)",
               }}
             >
-              {PACKAGE_PRICE}
+              {"$" + PACKAGE_PRICE}
             </p>
           </div>
 
