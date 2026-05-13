@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CarlyBradenProposalPage } from "@/components/knox/carly-braden-proposal-page";
+import { ProposalPage } from "@/components/saxophone/proposal-page";
 
 export const metadata: Metadata = {
   title: "Knox Signature - Carly & Braden Sax Feature",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
-      <CarlyBradenProposalPage />
+      <ProposalPage />
     </main>
   );
 }

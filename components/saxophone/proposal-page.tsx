@@ -6,12 +6,15 @@ import { VideoPlayer } from "./video-player"
 /*  CONFIG — fill in per-client. Empty strings render as [Placeholder] */
 /* ------------------------------------------------------------------ */
 const config = {
-  performerName: "",
-  brandName: "",
-  contactEmail: "",
-  websiteUrl: "",
-  packageName: "",
-  packagePrice: "",
+  performerName: "Ben",
+  brandName: "Knox Signature Sax Feature",
+  contactEmail: "hello@knoxsignature.com",
+  websiteUrl: "https://knoxsignature.com",
+  packageName: "Ceremony + Cocktail Hour + Reception",
+  packagePrice: "$2,750",
+  coupleName: "Carly & Braden",
+  eventDate: "December 4, 2026",
+  venue: "The Reserve at Marty B's",
 }
 
 const PERFORMER_NAME = config.performerName || "Ben"
@@ -20,15 +23,18 @@ const CONTACT_EMAIL = config.contactEmail || "booking@example.com"
 const WEBSITE_URL = config.websiteUrl || ""
 const PACKAGE_NAME = config.packageName || "Signature Sax Feature"
 const PACKAGE_PRICE = config.packagePrice || "$1,150"
+const COUPLE_NAME = config.coupleName || "Carly & Braden"
+const EVENT_DATE = config.eventDate || "December 4, 2026"
+const EVENT_VENUE = config.venue || "The Reserve at Marty B's"
 
 const HERO_IMAGE =
   "https://blog.hotlistdigital.com/wp-content/uploads/2026/02/A1B2B3EB-5FEB-4EC6-92DD-526510F2BE85.png"
 
 const PREVIEW_VIDEO =
-  "https://blog.hotlistdigital.com/wp-content/uploads/2026/02/copy_7176FC73-AE21-41C0-AD53-24F70BB44072.mov"
+  "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov"
 
 const PERFORMANCE_VIDEO =
-  "https://blog.hotlistdigital.com/wp-content/uploads/2026/02/copy_F7EA7A53-FECE-4210-92F6-0FD643DF13B1.mov"
+  "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov"
 
 /* ------------------------------------------------------------------ */
 /*  Shared components matching the proposal visual language            */
@@ -119,19 +125,30 @@ function Header() {
           >
             {`${PERFORMER_NAME} — Live Saxophone`}
           </h1>
+          <p
+            className="mt-4 text-[11px] font-semibold uppercase"
+            style={{ letterSpacing: "0.28em", color: "rgba(255,255,255,0.5)" }}
+          >
+            FOR {COUPLE_NAME.toUpperCase()}
+          </p>
         </FadeIn>
 
         <FadeIn delay={150}>
-          <p
-            className="mt-6 max-w-[48ch] font-light"
+          <div
+            className="mt-6 max-w-[62ch] space-y-4 font-light"
             style={{
               fontSize: "clamp(17px, 1.6vw, 20px)",
               color: "rgba(255,255,255,0.72)",
               lineHeight: 1.65,
             }}
           >
-            A featured live performance designed to elevate the room in real time.
-          </p>
+            <p>Thank you for the conversation.</p>
+            <p>
+              We loved hearing more about your wedding celebration at {EVENT_VENUE} on {EVENT_DATE}, and put together
+              the following saxophone-focused experience for your day.
+            </p>
+            <p>Below is the proposed structure for your Knox Signature Sax Feature experience.</p>
+          </div>
         </FadeIn>
 
         {/* Hero Image */}
@@ -186,8 +203,14 @@ function Experience() {
             color: "#ffffff",
           }}
         >
-          Live saxophone, tailored to the room.
+          Ceremony, Cocktail Hour & Reception Saxophone Feature
         </h3>
+        <p
+          className="text-[12px] font-semibold uppercase"
+          style={{ letterSpacing: "0.24em", color: "rgba(255,255,255,0.4)" }}
+        >
+          {EVENT_VENUE}
+        </p>
       </FadeIn>
 
       <FadeIn delay={100}>
@@ -195,29 +218,37 @@ function Experience() {
           className="font-light"
           style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.7 }}
         >
-          Ben performs live, roaming the room wireless and reading the energy of
-          the crowd in real time. Improvised melodies meet curated moments
-          throughout the evening, creating high-impact connections between the
-          music and your guests.
+          Ben performs live throughout the evening, roaming the room wirelessly and shaping the energy of the crowd
+          in real time.
         </p>
       </FadeIn>
 
       <FadeIn delay={200}>
+        <p
+          className="font-light mb-6"
+          style={{ color: "rgba(255,255,255,0.58)", lineHeight: 1.7 }}
+        >
+          The experience is designed to feel elevated, engaging, and interactive while still staying tasteful and
+          intentional throughout the day.
+        </p>
         <ul className="list-none mt-6 mb-0 p-0">
           <StyledListItem>
-            Performance layered directly over your DJ’s live mix
+            Ceremony: live saxophone performance for select ceremony moments
           </StyledListItem>
           <StyledListItem>
-            Real-time improvisation tailored to your crowd
+            Cocktail Hour: live roaming saxophone with warm, social atmosphere and real-time improvisation
           </StyledListItem>
           <StyledListItem>
-            Engaging performance within the crowd
+            Reception: live saxophone layered directly over your DJ&apos;s mix
           </StyledListItem>
           <StyledListItem>
             Dance floor walk-through moments
           </StyledListItem>
           <StyledListItem>
             Guest interaction and high-energy highlights
+          </StyledListItem>
+          <StyledListItem>
+            Real-time improvisation tailored to the room as the night builds
           </StyledListItem>
         </ul>
       </FadeIn>
@@ -258,7 +289,7 @@ function WhatsIncluded() {
             color: "#ffffff",
           }}
         >
-          Everything for the performance.
+          Everything for the sax feature.
         </h3>
       </FadeIn>
 
@@ -268,22 +299,16 @@ function WhatsIncluded() {
             Featured live saxophone performance by {PERFORMER_NAME}
           </StyledListItem>
           <StyledListItem>
-            Wireless sax setup for complete mobility
+            Wireless saxophone setup for complete mobility
           </StyledListItem>
           <StyledListItem>
-            Direct connection into your DJ’s sound system
+            Direct DJ/sound-system connection
           </StyledListItem>
           <StyledListItem>
             Coordination with DJ for a clean, continuous mix
           </StyledListItem>
           <StyledListItem>
-            Performance layered directly over the live DJ set
-          </StyledListItem>
-          <StyledListItem>
-            Dance floor walk-through moments + guest interaction highlights
-          </StyledListItem>
-          <StyledListItem>
-            {"Optional: add-on extension / additional set (upon request)"}
+            Guest interaction highlights and dance floor moments
           </StyledListItem>
         </ul>
       </FadeIn>
@@ -311,14 +336,14 @@ function Requirements() {
             color: "#ffffff",
           }}
         >
-          A few things we need from the DJ team.
+          What we need from the DJ or sound team.
         </h3>
       </FadeIn>
 
       <FadeIn delay={100}>
         <ul className="list-none my-5 p-0">
           <StyledListItem>
-            Access to a standard line/input through the DJ or sound system (details confirmed in advance).
+            Access to a standard line/input through the DJ or sound system
           </StyledListItem>
           <StyledListItem>
             A brief arrival window for soundcheck.
@@ -408,8 +433,7 @@ function Investment() {
           className="mt-6 text-[13px] font-light"
           style={{ color: "rgba(255,255,255,0.4)", lineHeight: 1.7 }}
         >
-          Planner pricing guide rate for the featured sax package. Extended time,
-          travel, or custom additions can be quoted separately.
+          A 50% deposit secures the date, with the remaining balance due 30 days prior to the event.
         </p>
       </FadeIn>
     </section>
@@ -436,7 +460,8 @@ function FinalCta() {
             letterSpacing: "-0.01em",
           }}
         >
-          If the room matters, this is the move.
+          We approach every event with the same goal: to create an atmosphere that feels elevated, memorable, and
+          engaging for both you and your guests.
         </p>
       </FadeIn>
 
@@ -445,7 +470,7 @@ function FinalCta() {
           className="mt-8 text-[13px] font-light"
           style={{ color: "rgba(255,255,255,0.35)", letterSpacing: "0.02em" }}
         >
-          Limited dates each season.
+          This proposal is confidential and intended solely for {COUPLE_NAME}.
         </p>
       </FadeIn>
     </section>
@@ -475,7 +500,7 @@ function ProposalFooter() {
             color: "rgba(255,255,255,0.45)",
           }}
         >
-          Planner pricing guide for live saxophone performance
+          Saxophone feature proposal by Knox Signature
         </p>
         <div
           className="text-[14px] flex flex-col gap-1"
