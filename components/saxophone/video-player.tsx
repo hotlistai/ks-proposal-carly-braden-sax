@@ -10,14 +10,15 @@ export function VideoPlayer({
   halfWidth?: boolean
 }) {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [hasStarted, setHasStarted] = useState(false)
 
   const isMovFile = src.toLowerCase().endsWith(".mov")
   const mimeType = isMovFile ? "video/quicktime" : "video/mp4"
 
   function handlePlay() {
     if (videoRef.current) {
-      videoRef.current.play()
+      setHasStarted(true)
+      void videoRef.current.play()
     }
   }
 
@@ -32,10 +33,8 @@ export function VideoPlayer({
           style={{ background: "#000" }}
           playsInline
           preload="metadata"
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-          onEnded={() => setIsPlaying(false)}
-          controls={isPlaying}
+          controls
+          onPlay={() => setHasStarted(true)}
         >
           <source src={src} type={mimeType} />
           {isMovFile && <source src={src} type="video/mp4" />}
@@ -45,7 +44,7 @@ export function VideoPlayer({
           onClick={handlePlay}
           aria-label="Play video"
           className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] rounded-full grid place-items-center cursor-pointer transition-opacity duration-200 ${
-            isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+            hasStarted ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
           style={{
             border: "1px solid rgba(255, 255, 255, 0.7)",
