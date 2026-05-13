@@ -15,8 +15,9 @@ const config = {
 };
 
 const BANNER_IMAGE = "https://www.knoxsignature.com/images/knox-press-banner.png";
-const PREVIEW_VIDEO = "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/dive.mov";
+const PREVIEW_VIDEO = "https://blog.hotlistdigital.com/wp-content/uploads/2026/01/copy_BF7A718B-4926-4B53-AD03-6D3BC8DB232F_2.mp4";
 const PREVIEW_VIDEO_POSTER = "/videos/carly-braden-sax-dive-poster.jpg";
+const SECOND_VIDEO = "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/WeddingReception-1.mov";
 
 const snapshotCards = [
   { label: "Date", value: config.eventDate },
@@ -268,6 +269,22 @@ function IncludedSection() {
   );
 }
 
+function ReceptionPreviewSection() {
+  return (
+    <section
+      className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]"
+      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
+    >
+      <FadeIn>
+        <SectionLabel>Reception Preview</SectionLabel>
+      </FadeIn>
+      <FadeIn delay={100}>
+        <VideoPlayer src={SECOND_VIDEO} halfWidth className="max-w-[520px]" />
+      </FadeIn>
+    </section>
+  );
+}
+
 function RequirementsSection() {
   return (
     <section
@@ -420,6 +437,7 @@ export function CarlyBradenProposalPage() {
       <Header />
       <EventSnapshot />
       <ExperienceSection />
+      <ReceptionPreviewSection />
       <IncludedSection />
       <RequirementsSection />
       <InvestmentSection />
