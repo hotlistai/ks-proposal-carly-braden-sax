@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
-import { ProposalPage } from "@/components/saxophone/proposal-page";
+import { InvestmentGuidePage } from "@/components/investment-guide/investment-guide-page";
 
 export const metadata: Metadata = {
-  title: "Knox Signature - Carly & Braden Sax Feature",
+  title: "Knox Signature Wedding Investment Guide",
   description:
-    "A Knox Signature saxophone-focused experience proposal for Carly and Braden.",
+    "A public Knox Signature wedding investment guide for cocktail hour, reception, ceremony coverage, and atmosphere review calls.",
   openGraph: {
-    title: "Knox Signature - Carly & Braden Sax Feature",
-    description: "Ceremony, cocktail hour, and reception saxophone feature by Ben.",
+    title: "Knox Signature Wedding Investment Guide",
+    description: "Cocktail hour, reception, ceremony coverage, and atmosphere review call details.",
     images: ["/ks-social-cover.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Knox Signature - Carly & Braden Sax Feature",
-    description: "Ceremony, cocktail hour, and reception saxophone feature by Ben.",
+    title: "Knox Signature Wedding Investment Guide",
+    description: "Cocktail hour, reception, ceremony coverage, and atmosphere review call details.",
     images: ["/ks-social-cover.png"],
   },
 };
 
 export default function Page() {
-  return (
-    <main>
-      <ProposalPage />
-    </main>
-  );
+  return <InvestmentGuidePage />;
 }

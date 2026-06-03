@@ -1,0 +1,112 @@
+{
+  "brand": "KNOX SIGNATURE",
+  "title": "WEDDING INVESTMENT GUIDE",
+  "intro": [
+    "Knox Signature is a luxury hybrid live music and DJ experience designed to shape the atmosphere of your wedding from the first arrival to the final song.",
+    "Every event is custom tailored to the venue, timeline, and vision for the day, but the information below provides a starting point for most celebrations."
+  ],
+  "media": {
+    "bannerImage": {
+      "src": "https://www.knoxsignature.com/images/knox-press-banner.png",
+      "alt": "Knox Signature"
+    },
+    "firstVideo": {
+      "label": "Man I Need video",
+      "src": "https://blog.hotlistdigital.com/wp-content/uploads/2026/01/copy_BF7A718B-4926-4B53-AD03-6D3BC8DB232F_2.mp4",
+      "poster": "/videos/carly-braden-man-i-need-poster.jpg"
+    },
+    "setupImage": {
+      "src": "https://raw.githubusercontent.com/hotlistai/anna-max-proposal/main/assets/Images/knox-signature-set-1.png",
+      "alt": "Knox Signature wedding setup with white DJ command center and architectural lighting"
+    },
+    "secondVideo": {
+      "label": "Ben wedding video",
+      "src": "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/WeddingReception-1.mov",
+      "poster": "/videos/victoria-aaron-wedding-reception-poster.jpg"
+    }
+  },
+  "snapshots": [
+    {
+      "label": "Starting Investment",
+      "value": "$5,950"
+    },
+    {
+      "label": "Typical Range",
+      "value": "$5,950-$9,500"
+    },
+    {
+      "label": "Core Format",
+      "value": "Cocktail Hour + Reception"
+    },
+    {
+      "label": "Ceremony Add-On",
+      "value": "$1,450"
+    }
+  ],
+  "primaryOffer": {
+    "eyebrow": "The Full Atmosphere",
+    "title": "Cocktail Hour + Reception",
+    "startingAt": "$5,950",
+    "sections": [
+      {
+        "title": "Cocktail Hour",
+        "items": [
+          "Live piano and saxophone performance",
+          "A welcoming, elevated atmosphere as guests arrive",
+          "Thoughtful live music designed to feel social, memorable, and refined"
+        ]
+      },
+      {
+        "title": "Reception",
+        "items": [
+          "DJ-led reception with live saxophone integration",
+          "Emcee coverage for introductions, announcements, and key moments",
+          "Music direction for dinner, transitions, and dance floor",
+          "Live saxophone integration throughout the evening"
+        ]
+      },
+      {
+        "title": "Production & Design",
+        "items": [
+          "Minimal white DJ command center",
+          "Premium column-array sound system",
+          "Architectural atmospheric lighting",
+          "Wireless microphones for speeches and toasts",
+          "Digital mixing for clarity and control"
+        ]
+      },
+      {
+        "title": "Planning & Coordination",
+        "items": [
+          "Site visit prior to the wedding day",
+          "Music planning session",
+          "Access to the Knox Signature Planning Portal"
+        ]
+      }
+    ]
+  },
+  "ceremony": {
+    "title": "Ceremony Coverage",
+    "addOnInvestment": "$1,450",
+    "items": [
+      "Wireless speaker coverage",
+      "Wireless lapel microphone for officiant",
+      "Wireless lapel microphone for groom",
+      "Recorded ceremony music and cueing",
+      "Optional live saxophone accents for select moments",
+      "Dedicated ceremony technician",
+      "Clean, discreet ceremony setup"
+    ]
+  },
+  "difference": {
+    "title": "What Makes Knox Different",
+    "copy": "We are not a traditional DJ company. Knox Signature blends live saxophone, live piano, and curated DJ performance into a single, cohesive experience designed around flow, energy, and intentional pacing. Our focus is not on oversized production or unnecessary extras. It is on creating an atmosphere that feels effortless, elevated, and memorable."
+  },
+  "investmentNotes": "Most Knox Signature weddings fall between $5,950 and $9,500 depending on ceremony coverage, venue logistics, multiple locations, travel, and event duration.",
+  "cta": {
+    "title": "Next Steps",
+    "copy": "If this feels aligned with your vision, we'd love to learn more about your wedding. Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day.",
+    "label": "Schedule an Atmosphere Review Call",
+    "href": "https://cal.com/knoxsignature/atmospherereviewcall"
+  }
+}
