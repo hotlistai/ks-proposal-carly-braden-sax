@@ -24,9 +24,14 @@ test("investment guide includes the requested media sequence", () => {
 test("investment guide includes planner-friendly coverage sections", () => {
   const sectionTitles = guide.primaryOffer.sections.map((section) => section.title);
 
-  assert.deepEqual(sectionTitles, ["Cocktail Hour", "Reception", "Planning & Coordination"]);
-  assert.equal(guide.production.title, "Production & Design");
-  assert.ok(guide.production.items.includes("Minimal white DJ command center"));
-  assert.equal(guide.ceremony.heading, "Ala carte");
+  assert.deepEqual(sectionTitles, [
+    "Cocktail Hour",
+    "Reception",
+    "Planning & Coordination",
+    "Production & Design",
+  ]);
+  const production = guide.primaryOffer.sections.find((section) => section.title === "Production & Design");
+  assert.ok(production.items.includes("Minimal white DJ command center"));
+  assert.equal(guide.ceremony.heading, "A la carte");
   assert.ok(guide.difference.copy.includes("not a traditional DJ company"));
 });

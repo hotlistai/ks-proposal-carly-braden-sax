@@ -72,22 +72,22 @@
           "Music planning session",
           "Access to the Knox Signature Planning Portal"
         ]
+      },
+      {
+        "title": "Production & Design",
+        "items": [
+          "Minimal white DJ command center",
+          "Premium column-array sound system",
+          "Architectural atmospheric lighting",
+          "Wireless microphones for speeches and toasts",
+          "Digital mixing for clarity and control"
+        ]
       }
-    ]
-  },
-  "production": {
-    "title": "Production & Design",
-    "items": [
-      "Minimal white DJ command center",
-      "Premium column-array sound system",
-      "Architectural atmospheric lighting",
-      "Wireless microphones for speeches and toasts",
-      "Digital mixing for clarity and control"
     ]
   },
   "ceremony": {
     "title": "Ceremony Coverage",
-    "heading": "Ala carte",
+    "heading": "A la carte",
     "addOnInvestment": "$1,450",
     "items": [
       "Wireless speaker coverage",
