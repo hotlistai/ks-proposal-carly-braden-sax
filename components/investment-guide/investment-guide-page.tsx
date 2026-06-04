@@ -163,7 +163,6 @@ function PrimaryOffer() {
 function ProductionBreak() {
   return (
     <section className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]">
-      <SectionLabel>Production & Design</SectionLabel>
       <Image
         src={guide.media.setupImage.src}
         alt={guide.media.setupImage.alt}
@@ -172,6 +171,19 @@ function ProductionBreak() {
         className="block h-auto w-full"
         style={{ border: "1px solid rgba(255,255,255,0.08)" }}
       />
+      <div
+        className="px-6 py-6 md:px-8 md:py-7"
+        style={{
+          background: "rgba(255,255,255,0.018)",
+          border: "1px solid rgba(255,255,255,0.06)",
+          borderTop: 0,
+        }}
+      >
+        <h3 className="mb-5 text-[18px] font-semibold" style={{ color: "#ffffff", letterSpacing: "-0.01em" }}>
+          {guide.production.title}
+        </h3>
+        <DashList items={guide.production.items} />
+      </div>
     </section>
   );
 }
@@ -189,7 +201,7 @@ function CeremonyCoverage() {
             className="font-extrabold"
             style={{ fontSize: "clamp(34px, 4vw, 54px)", letterSpacing: "-0.045em", lineHeight: 0.98 }}
           >
-            Add-On Investment
+            {guide.ceremony.heading}
           </h2>
           <p
             className="mt-5 font-extrabold"

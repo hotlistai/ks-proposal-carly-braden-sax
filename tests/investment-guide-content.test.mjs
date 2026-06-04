@@ -16,19 +16,17 @@ test("investment guide includes required pricing and CTA details", () => {
 });
 
 test("investment guide includes the requested media sequence", () => {
-  assert.match(guide.media.firstVideo.label, /Man I Need/i);
-  assert.match(guide.media.secondVideo.label, /Ben wedding video/i);
+  assert.equal(guide.media.firstVideo.label, "Preview");
+  assert.equal(guide.media.secondVideo.label, "Preview");
   assert.match(guide.media.setupImage.alt, /Knox Signature wedding setup/i);
 });
 
 test("investment guide includes planner-friendly coverage sections", () => {
   const sectionTitles = guide.primaryOffer.sections.map((section) => section.title);
 
-  assert.deepEqual(sectionTitles, [
-    "Cocktail Hour",
-    "Reception",
-    "Production & Design",
-    "Planning & Coordination",
-  ]);
+  assert.deepEqual(sectionTitles, ["Cocktail Hour", "Reception", "Planning & Coordination"]);
+  assert.equal(guide.production.title, "Production & Design");
+  assert.ok(guide.production.items.includes("Minimal white DJ command center"));
+  assert.equal(guide.ceremony.heading, "Ala carte");
   assert.ok(guide.difference.copy.includes("not a traditional DJ company"));
 });

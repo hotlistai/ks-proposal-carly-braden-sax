@@ -11,7 +11,7 @@
       "alt": "Knox Signature"
     },
     "firstVideo": {
-      "label": "Man I Need video",
+      "label": "Preview",
       "src": "https://blog.hotlistdigital.com/wp-content/uploads/2026/01/copy_BF7A718B-4926-4B53-AD03-6D3BC8DB232F_2.mp4",
       "poster": "/videos/carly-braden-man-i-need-poster.jpg"
     },
@@ -20,7 +20,7 @@
       "alt": "Knox Signature wedding setup with white DJ command center and architectural lighting"
     },
     "secondVideo": {
-      "label": "Ben wedding video",
+      "label": "Preview",
       "src": "https://blog.hotlistdigital.com/wp-content/uploads/2026/05/WeddingReception-1.mov",
       "poster": "/videos/victoria-aaron-wedding-reception-poster.jpg"
     }
@@ -66,16 +66,6 @@
         ]
       },
       {
-        "title": "Production & Design",
-        "items": [
-          "Minimal white DJ command center",
-          "Premium column-array sound system",
-          "Architectural atmospheric lighting",
-          "Wireless microphones for speeches and toasts",
-          "Digital mixing for clarity and control"
-        ]
-      },
-      {
         "title": "Planning & Coordination",
         "items": [
           "Site visit prior to the wedding day",
@@ -85,8 +75,19 @@
       }
     ]
   },
+  "production": {
+    "title": "Production & Design",
+    "items": [
+      "Minimal white DJ command center",
+      "Premium column-array sound system",
+      "Architectural atmospheric lighting",
+      "Wireless microphones for speeches and toasts",
+      "Digital mixing for clarity and control"
+    ]
+  },
   "ceremony": {
     "title": "Ceremony Coverage",
+    "heading": "Ala carte",
     "addOnInvestment": "$1,450",
     "items": [
       "Wireless speaker coverage",
