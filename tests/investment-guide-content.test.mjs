@@ -10,9 +10,18 @@ test("investment guide includes required pricing and CTA details", () => {
   assert.equal(guide.brand, "KNOX SIGNATURE");
   assert.equal(guide.title, "WEDDING INVESTMENT GUIDE");
   assert.equal(guide.primaryOffer.startingAt, "$5,950");
-  assert.equal(guide.ceremony.addOnInvestment, "$1,450");
+  assert.equal(guide.snapshots.find((snapshot) => snapshot.label === "Ceremony Add-On")?.value, "$950");
+  assert.equal(guide.ceremony.addOnInvestment, "$950");
   assert.match(guide.investmentNotes, /\$5,950 and \$9,500/);
   assert.equal(guide.cta.href, "https://cal.com/knoxsignature/atmospherereviewcall");
+});
+
+test("investment guide CTA small copy avoids repeating the headline", () => {
+  assert.equal(
+    guide.cta.copy,
+    "Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day."
+  );
+  assert.doesNotMatch(guide.cta.copy, /If this feels aligned/i);
 });
 
 test("investment guide includes the requested media sequence", () => {

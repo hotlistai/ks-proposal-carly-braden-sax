@@ -40,7 +40,7 @@
     },
     {
       "label": "Ceremony Add-On",
-      "value": "$1,450"
+      "value": "$950"
     }
   ],
   "primaryOffer": {
@@ -88,7 +88,7 @@
   "ceremony": {
     "title": "Ceremony Coverage",
     "heading": "A la carte",
-    "addOnInvestment": "$1,450",
+    "addOnInvestment": "$950",
     "items": [
       "Wireless speaker coverage",
       "Wireless lapel microphone for officiant",
@@ -106,7 +106,7 @@
   "investmentNotes": "Most Knox Signature weddings fall between $5,950 and $9,500 depending on ceremony coverage, venue logistics, multiple locations, travel, and event duration.",
   "cta": {
     "title": "Next Steps",
-    "copy": "If this feels aligned with your vision, we'd love to learn more about your wedding. Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day.",
+    "copy": "Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day.",
     "label": "Schedule an Atmosphere Review Call",
     "href": "https://cal.com/knoxsignature/atmospherereviewcall"
   }
