@@ -27,6 +27,10 @@ test("investment guide CTA small copy avoids repeating the headline", () => {
 test("investment guide includes the requested media sequence", () => {
   assert.equal(guide.media.firstVideo.label, "Preview");
   assert.equal(guide.media.secondVideo.label, "Preview");
+  assert.equal(
+    guide.media.secondVideo.src,
+    "https://blog.hotlistdigital.com/wp-content/uploads/2026/07/26-07-23-MainKnoxVideo.mov"
+  );
   assert.match(guide.media.setupImage.alt, /Knox Signature wedding setup/i);
 });
 
