@@ -37,10 +37,6 @@
     {
       "label": "Core Format",
       "value": "Cocktail Hour + Reception"
-    },
-    {
-      "label": "Ceremony Add-On",
-      "value": "$950"
     }
   ],
   "primaryOffer": {
@@ -85,25 +81,11 @@
       }
     ]
   },
-  "ceremony": {
-    "title": "Ceremony Coverage",
-    "heading": "A la carte",
-    "addOnInvestment": "$950",
-    "items": [
-      "Wireless speaker coverage",
-      "Wireless lapel microphone for officiant",
-      "Wireless lapel microphone for groom",
-      "Recorded ceremony music and cueing",
-      "Optional live saxophone accents for select moments",
-      "Dedicated ceremony technician",
-      "Clean, discreet ceremony setup"
-    ]
-  },
   "difference": {
     "title": "What Makes Knox Different",
     "copy": "We are not a traditional DJ company. Knox Signature blends live saxophone, live piano, and curated DJ performance into a single, cohesive experience designed around flow, energy, and intentional pacing. Our focus is not on oversized production or unnecessary extras. It is on creating an atmosphere that feels effortless, elevated, and memorable."
   },
-  "investmentNotes": "Most Knox Signature weddings fall between $5,950 and $9,500 depending on ceremony coverage, venue logistics, multiple locations, travel, and event duration.",
+  "investmentNotes": "Most Knox Signature weddings fall between $5,950 and $9,500 depending on venue logistics, multiple locations, travel, and event duration.",
   "cta": {
     "title": "Next Steps",
     "copy": "Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day.",
