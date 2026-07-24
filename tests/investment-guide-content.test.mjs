@@ -10,8 +10,8 @@ test("investment guide includes required pricing and CTA details", () => {
   assert.equal(guide.brand, "KNOX SIGNATURE");
   assert.equal(guide.title, "WEDDING INVESTMENT GUIDE");
   assert.equal(guide.primaryOffer.startingAt, "$5,950");
-  assert.equal(guide.snapshots.some((snapshot) => snapshot.label === "Ceremony Add-On"), false);
-  assert.equal("ceremony" in guide, false);
+  assert.equal(guide.snapshots.find((snapshot) => snapshot.label === "Ceremony Add-On")?.value, "$950");
+  assert.equal(guide.ceremony.addOnInvestment, "$950");
   assert.match(guide.investmentNotes, /\$5,950 and \$9,500/);
   assert.equal(guide.cta.href, "https://cal.com/knoxsignature/atmospherereviewcall");
 });
@@ -45,5 +45,6 @@ test("investment guide includes planner-friendly coverage sections", () => {
   ]);
   const production = guide.primaryOffer.sections.find((section) => section.title === "Production & Design");
   assert.ok(production.items.includes("Minimal white DJ command center"));
+  assert.equal(guide.ceremony.heading, "Ceremony Coverage");
   assert.ok(guide.difference.copy.includes("not a traditional DJ company"));
 });

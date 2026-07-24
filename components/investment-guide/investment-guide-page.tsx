@@ -71,7 +71,7 @@ function SnapshotGrid() {
       style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
     >
       <SectionLabel>Guide Snapshot</SectionLabel>
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {guide.snapshots.map((snapshot) => (
           <div
             key={snapshot.label}
@@ -172,6 +172,38 @@ function ProductionBreak() {
         className="block h-auto w-full"
         style={{ border: "1px solid rgba(255,255,255,0.08)" }}
       />
+    </section>
+  );
+}
+
+function CeremonyCoverage() {
+  return (
+    <section
+      className="mx-auto max-w-[1040px] px-9 py-[84px] md:px-[72px]"
+      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
+    >
+      <div className="grid gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-start">
+        <div>
+          <h2
+            className="font-extrabold"
+            style={{ fontSize: "clamp(34px, 4vw, 54px)", letterSpacing: "-0.045em", lineHeight: 0.98 }}
+          >
+            {guide.ceremony.heading}
+          </h2>
+          <p
+            className="mt-5 font-extrabold"
+            style={{ fontSize: "clamp(36px, 5vw, 62px)", letterSpacing: "-0.055em", color: "#ffffff" }}
+          >
+            {guide.ceremony.addOnInvestment}
+          </p>
+        </div>
+        <div
+          className="px-7 py-7 md:px-8"
+          style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}
+        >
+          <DashList items={guide.ceremony.items} />
+        </div>
+      </div>
     </section>
   );
 }
@@ -288,6 +320,7 @@ export function InvestmentGuidePage() {
       <SnapshotGrid />
       <PrimaryOffer />
       <ProductionBreak />
+      <CeremonyCoverage />
       <section className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]">
         <GuideVideo {...guide.media.secondVideo} />
       </section>
