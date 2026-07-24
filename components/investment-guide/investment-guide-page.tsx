@@ -1,5 +1,6 @@
 import Image from "next/image";
 import guide from "@/content/investment-guide.json";
+import { GlassVideoPreview } from "./glass-video-preview";
 
 type OfferSection = {
   title: string;
@@ -10,6 +11,7 @@ type GuideVideoProps = {
   label: string;
   src: string;
   poster?: string;
+  glassPreview?: boolean;
 };
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -42,12 +44,14 @@ function DashList({ items }: { items: string[] }) {
   );
 }
 
-function GuideVideo({ label, src, poster }: GuideVideoProps) {
+function GuideVideo({ label, src, poster, glassPreview = false }: GuideVideoProps) {
   const isMov = src.toLowerCase().endsWith(".mov");
 
   return (
     <div>
       <SectionLabel>{label}</SectionLabel>
+      {glassPreview && poster ? <GlassVideoPreview src={src} poster={poster} isMov={isMov} /> : null}
+      {!glassPreview || !poster ? (
       <video
         className="block w-full bg-black"
         controls
@@ -60,6 +64,7 @@ function GuideVideo({ label, src, poster }: GuideVideoProps) {
         {isMov ? <source src={src} type="video/mp4" /> : null}
         Your browser does not support the video tag.
       </video>
+      ) : null}
     </div>
   );
 }

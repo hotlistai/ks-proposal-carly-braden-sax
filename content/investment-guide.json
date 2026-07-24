@@ -21,7 +21,9 @@
     },
     "secondVideo": {
       "label": "Preview",
-      "src": "https://blog.hotlistdigital.com/wp-content/uploads/2026/07/26-07-23-MainKnoxVideo.mov"
+      "src": "https://blog.hotlistdigital.com/wp-content/uploads/2026/07/26-07-23-MainKnoxVideo.mov",
+      "poster": "/videos/main-knox-video-poster.jpg",
+      "glassPreview": true
     }
   },
   "snapshots": [
