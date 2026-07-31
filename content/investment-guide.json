@@ -29,11 +29,11 @@
   "snapshots": [
     {
       "label": "Starting Investment",
-      "value": "$5,450"
+      "value": "$5,500"
     },
     {
       "label": "Typical Range",
-      "value": "$5,450-$8,950"
+      "value": "$5,500-$8,950"
     },
     {
       "label": "Core Format",
@@ -47,7 +47,7 @@
   "primaryOffer": {
     "eyebrow": "The Full Atmosphere",
     "title": "Cocktail Hour + Reception",
-    "startingAt": "$5,450",
+    "startingAt": "$5,500",
     "sections": [
       {
         "title": "Cocktail Hour",
@@ -103,7 +103,7 @@
     "title": "What Makes Knox Different",
     "copy": "We are not a traditional DJ company. Knox Signature blends live saxophone, live piano, and curated DJ performance into a single, cohesive experience designed around flow, energy, and intentional pacing. Our focus is not on oversized production or unnecessary extras. It is on creating an atmosphere that feels effortless, elevated, and memorable."
   },
-  "investmentNotes": "Most Knox Signature weddings fall between $5,450 and $8,950 depending on ceremony coverage, venue logistics, multiple locations, travel, and event duration.",
+  "investmentNotes": "Most Knox Signature weddings fall between $5,500 and $8,950 depending on ceremony coverage, venue logistics, multiple locations, travel, and event duration.",
   "cta": {
     "title": "Next Steps",
     "copy": "Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day.",
