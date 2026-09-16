@@ -324,7 +324,7 @@ export function InvestmentGuidePage() {
       <ProductionBreak />
       <CeremonyCoverage />
       <section className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]">
-        <div className="max-w-[360px]">
+        <div className="mx-auto max-w-[360px]">
           <GuideVideo {...guide.media.secondVideo} />
         </div>
       </section>
