@@ -31,6 +31,7 @@ test("investment guide includes the requested media sequence", () => {
     guide.media.firstVideo.src,
     "https://blog.hotlistdigital.com/wp-content/uploads/2026/09/BENPHIL-EDIT.mov"
   );
+  assert.equal(guide.media.firstVideo.poster, "/videos/benphil-edit-poster.jpg");
   assert.equal(guide.media.secondVideo.label, "Preview");
   assert.equal(
     guide.media.secondVideo.src,
