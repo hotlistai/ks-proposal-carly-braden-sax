@@ -45,12 +45,10 @@ function DashList({ items }: { items: string[] }) {
 }
 
 function GuideVideo({ label, src, poster, glassPreview = false }: GuideVideoProps) {
-  const isMov = src.toLowerCase().endsWith(".mov");
-
   return (
     <div>
       <SectionLabel>{label}</SectionLabel>
-      {glassPreview && poster ? <GlassVideoPreview src={src} poster={poster} isMov={isMov} /> : null}
+      {glassPreview && poster ? <GlassVideoPreview src={src} poster={poster} /> : null}
       {!glassPreview || !poster ? (
       <video
         className="block w-full bg-black"
@@ -60,8 +58,7 @@ function GuideVideo({ label, src, poster, glassPreview = false }: GuideVideoProp
         poster={poster}
         style={{ border: "1px solid rgba(255,255,255,0.08)" }}
       >
-        <source src={src} type={isMov ? "video/quicktime" : "video/mp4"} />
-        {isMov ? <source src={src} type="video/mp4" /> : null}
+        <source src={src} />
         Your browser does not support the video tag.
       </video>
       ) : null}

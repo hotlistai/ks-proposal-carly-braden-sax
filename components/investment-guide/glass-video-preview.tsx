@@ -5,11 +5,9 @@ import { useRef, useState } from "react";
 export function GlassVideoPreview({
   src,
   poster,
-  isMov,
 }: {
   src: string;
   poster: string;
-  isMov: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
@@ -32,8 +30,7 @@ export function GlassVideoPreview({
         poster={poster}
         onPlay={() => setHasStarted(true)}
       >
-        <source src={src} type={isMov ? "video/quicktime" : "video/mp4"} />
-        {isMov ? <source src={src} type="video/mp4" /> : null}
+        <source src={src} />
         Your browser does not support the video tag.
       </video>
 

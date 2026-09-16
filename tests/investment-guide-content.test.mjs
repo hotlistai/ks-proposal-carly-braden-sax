@@ -27,6 +27,10 @@ test("investment guide CTA small copy avoids repeating the headline", () => {
 
 test("investment guide includes the requested media sequence", () => {
   assert.equal(guide.media.firstVideo.label, "Preview");
+  assert.equal(
+    guide.media.firstVideo.src,
+    "https://blog.hotlistdigital.com/wp-content/uploads/2026/09/BENPHIL-EDIT.mov"
+  );
   assert.equal(guide.media.secondVideo.label, "Preview");
   assert.equal(
     guide.media.secondVideo.src,
