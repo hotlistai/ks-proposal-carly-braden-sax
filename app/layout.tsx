@@ -4,25 +4,25 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://details.knoxsignature.com"),
-  title: "Knox Signature Wedding Investment Guide",
+  title: "Knox Signature | Mallory & Ethan",
   description:
-    "A public Knox Signature wedding investment guide for cocktail hour, reception, ceremony coverage, and atmosphere review calls.",
+    "A Knox Signature wedding proposal for Mallory and Ethan at Park City Club.",
   icons: {
     icon: "/ks-favicon.png",
     shortcut: "/ks-favicon.png",
     apple: "/ks-favicon.png",
   },
   openGraph: {
-    title: "Knox Signature Wedding Investment Guide",
+    title: "Knox Signature | Mallory & Ethan",
     description:
-      "A public Knox Signature wedding investment guide for cocktail hour, reception, ceremony coverage, and atmosphere review calls.",
+      "A Knox Signature wedding proposal for Mallory and Ethan at Park City Club.",
     images: ["/ks-social-cover.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Knox Signature Wedding Investment Guide",
+    title: "Knox Signature | Mallory & Ethan",
     description:
-      "A public Knox Signature wedding investment guide for cocktail hour, reception, ceremony coverage, and atmosphere review calls.",
+      "A Knox Signature wedding proposal for Mallory and Ethan at Park City Club.",
     images: ["/ks-social-cover.png"],
   },
 };

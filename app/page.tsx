@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { InvestmentGuidePage } from "@/components/investment-guide/investment-guide-page";
+import { ErynHaydenProposalPage } from "@/components/knox/eryn-hayden-proposal-page";
 
 export const metadata: Metadata = {
-  title: "Knox Signature Wedding Investment Guide",
+  title: "Knox Signature | Mallory & Ethan",
   description:
-    "A public Knox Signature wedding investment guide for cocktail hour, reception, ceremony coverage, and atmosphere review calls.",
+    "A Knox Signature wedding proposal for Mallory and Ethan at Park City Club.",
   openGraph: {
-    title: "Knox Signature Wedding Investment Guide",
-    description: "Cocktail hour, reception, ceremony coverage, and atmosphere review call details.",
+    title: "Knox Signature | Mallory & Ethan",
+    description: "Cocktail hour and reception atmosphere designed for Mallory and Ethan.",
     images: ["/ks-social-cover.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Knox Signature Wedding Investment Guide",
-    description: "Cocktail hour, reception, ceremony coverage, and atmosphere review call details.",
+    title: "Knox Signature | Mallory & Ethan",
+    description: "Cocktail hour and reception atmosphere designed for Mallory and Ethan.",
     images: ["/ks-social-cover.png"],
   },
 };
 
 export default function Page() {
-  return <InvestmentGuidePage />;
+  return <ErynHaydenProposalPage />;
 }
