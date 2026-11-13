@@ -138,6 +138,7 @@ function PrimaryOffer() {
             >
               {guide.primaryOffer.title}
             </h2>
+            <p className="mt-3 text-base text-white/80">{guide.primaryOffer.coverage}</p>
             <p
               className="mt-4 text-[12px] font-semibold uppercase"
               style={{ letterSpacing: "0.24em", color: "rgba(255,255,255,0.42)" }}
