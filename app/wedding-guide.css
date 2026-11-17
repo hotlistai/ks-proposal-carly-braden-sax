@@ -95,11 +95,14 @@ body {
   background: #151515;
   isolation: isolate;
 }
+.guide-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
 .guide-hero__image {
   object-fit: cover;
-  object-position: 62% center;
-  filter: grayscale(1);
-  z-index: -2;
+  object-position: 52% center;
 }
 .guide-hero::after {
   position: absolute;
@@ -576,5 +579,15 @@ body {
 @media (max-width: 800px) {
   .guide-enhancement__visual {
     max-width: none;
+  }
+}
+
+/* Keep both members of the duo in the phone hero crop. */
+@media (max-width: 600px) {
+  .guide-hero { background: #090909; }
+  .guide-hero__media { bottom: auto; height: 72%; }
+  .guide-hero__image { object-position: 52% top; }
+  .guide-hero::after {
+    background: linear-gradient(180deg, rgb(0 0 0 / 20%) 0%, rgb(0 0 0 / 10%) 24%, rgb(0 0 0 / 48%) 48%, #090909 72%);
   }
 }

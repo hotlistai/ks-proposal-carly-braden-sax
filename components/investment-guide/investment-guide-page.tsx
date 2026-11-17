@@ -16,14 +16,16 @@ export function InvestmentGuidePage() {
   return (
     <main className="wedding-guide">
       <section className="guide-hero" aria-labelledby="guide-title">
-        <Image
-          className="guide-hero__image"
-          src="/images/collection-poster.webp"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-        />
+        <div className="guide-hero__media">
+          <Image
+            className="guide-hero__image"
+            src="/images/phil-ben-hero.png"
+            alt="Phil and Ben, the KNOX Signature saxophone and DJ duo"
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="guide-hero__overlay">
           <header className="guide-brand">
             <a href="https://pr.knoxsignature.com" className="guide-wordmark">

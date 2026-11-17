@@ -44,3 +44,7 @@ No client portal records or PR page source were modified. No inquiry messages we
 ### Footer button cleanup
 
 Removed the diagonal arrow glyph from both footer CTAs at the owner's request. Both labels are now text-only, with the existing inquiry funnel and call links preserved. Deployment dpl_ChfmcF6SShTxAwkiYP4UtRmTPfYP is bound to details.knoxsignature.com. Hosted build and content checks passed.
+
+### Final hero photo
+
+Replaced the collection poster with the owner's supplied Monochrome Jazz Duo with Saxophone.png. The deployed phil-ben-hero.png preserves the supplied bytes. Added phone-specific framing to retain both duo members and fade into the existing dark hero background. Desktop 1440px and phone 390px screenshots verified. Deployment dpl_71sqLahSBNhsiPqJj2Cgwon3Uh9U is bound to details.knoxsignature.com; prior deployment was dpl_ChfmcF6SShTxAwkiYP4UtRmTPfYP. Hero photo selection is complete.
