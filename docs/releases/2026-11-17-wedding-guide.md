@@ -27,3 +27,16 @@ Pricing preserves the current live correction in base commit 5691c8c: Signature 
 - npm audit reports 25 existing dependency findings (7 moderate, 17 high, 1 critical). Dependency manifests and lockfile were not changed by this design update. Remediation is outside this change.
 
 No client portal records or PR page source were modified. No inquiry messages were sent.
+
+## Owner revisions, November 17
+
+- Restored the exact hero tagline: Luxury Sax + DJ Atmospheres.
+- Changed Explore the investment to a filled oval button with no rectangular outline.
+- Highlighted Signature as its own starting-point block with Saxophone + DJ and its coverage, followed by a separate add-on list.
+- Changed ceremony to $950 everywhere in the guide and full-night violin to $1,500. Ceremony-only violin remains $850, drums from $1,200, Signature from $5,500.
+- Removed Lux/Ultra package terminology from visible guide copy; violin and drums are straightforward enhancements. Drums are identified as reception coverage.
+- Added the exact owner-supplied knox-violin.jpeg and knox-drum.jpg, with both original compositions intact. Public file bytes match the supplied files.
+- Changed the inquiry CTA to https://www.knoxsignature.com/request?cta_source=wedding-investment-guide. Verified that the existing occasion-selection funnel loads. No submission was made, and HoneyBook integration remains deferred by the owner.
+- No password added. The hero photo remains the existing collection poster while the owner selects a replacement; the draft duo-photo replacement was removed before publication.
+- Deployment: dpl_C9tqu84PuYLCwFWJi7nfnrxmPaqo, https://ks-proposal-carly-braden-a6gg7op3z-hotlist-ai.vercel.app. Previous custom-host deployment: dpl_DNDSJC3YXig2zgeVgcQVnrudNLq1.
+- Hosted build Ready; existing content tests pass with updated ceremony expectations. Desktop 1440px and mobile 390px visual review passed, including all images, the separated Signature summary, the oval button and pricing. Dependency audit findings remain unchanged.

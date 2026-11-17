@@ -11,8 +11,8 @@ test("investment guide includes required pricing and CTA details", () => {
   assert.equal(guide.title, "WEDDING INVESTMENT GUIDE");
   assert.equal(guide.primaryOffer.startingAt, "$5,500");
   assert.equal(guide.snapshots.find((snapshot) => snapshot.label === "Typical Range")?.value, "$5,500-$8,950");
-  assert.equal(guide.snapshots.find((snapshot) => snapshot.label === "Ceremony Add-On")?.value, "$750");
-  assert.equal(guide.ceremony.addOnInvestment, "$750");
+  assert.equal(guide.snapshots.find((snapshot) => snapshot.label === "Ceremony Add-On")?.value, "$950");
+  assert.equal(guide.ceremony.addOnInvestment, "$950");
   assert.match(guide.investmentNotes, /\$5,500 and \$8,950/);
   assert.equal(guide.cta.href, "https://cal.com/knoxsignature/atmospherereviewcall");
 });

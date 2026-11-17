@@ -41,7 +41,7 @@
     },
     {
       "label": "Ceremony Add-On",
-      "value": "$750"
+      "value": "$950"
     }
   ],
   "primaryOffer": {
@@ -89,7 +89,7 @@
   },
   "ceremony": {
     "heading": "Ceremony Coverage",
-    "addOnInvestment": "$750",
+    "addOnInvestment": "$950",
     "items": [
       "Wireless speaker coverage",
       "Wireless lapel microphone for officiant",
@@ -114,7 +114,7 @@
   "enhancements": {
     "violin": {
       "ceremonyOnly": "$850",
-      "fullNight": "$1,200"
+      "fullNight": "$1,500"
     },
     "drums": {
       "startingAt": "$1,200"
@@ -122,6 +122,6 @@
   },
   "inquiry": {
     "label": "Inquire about your date",
-    "href": "mailto:hello@knoxsignature.com?subject=Wedding%20investment%20inquiry"
+    "href": "https://www.knoxsignature.com/request?cta_source=wedding-investment-guide"
   }
 }

@@ -503,3 +503,78 @@ body {
     break-inside: avoid;
   }
 }
+
+/* Owner review: Signature leads, followed by straightforward optional coverage. */
+.guide-button--explore {
+  border: 0;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink) !important;
+  padding: 1.1rem 1.65rem;
+  min-height: 3.25rem;
+}
+.guide-button--explore:hover {
+  background: #d9d6cd;
+}
+.guide-button--explore span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.guide-signature-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: clamp(3rem, 6vw, 6rem);
+  padding: clamp(2rem, 4vw, 4rem) 0;
+  border-block: 1px solid var(--line);
+}
+.guide-signature-summary h3 {
+  margin: 1rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 5.25vw, 6.35rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 1;
+}
+.guide-signature-summary .guide-price {
+  margin: 0 !important;
+  text-align: right;
+  flex-shrink: 0;
+}
+.guide-addons-heading {
+  margin-top: 3rem !important;
+}
+.guide-addons-heading + .guide-prices {
+  margin-top: 1.5rem !important;
+}
+@media (max-width: 520px) {
+  .guide-signature-summary {
+    align-items: start;
+    flex-direction: column;
+  }
+  .guide-signature-summary .guide-price {
+    text-align: left;
+  }
+}
+.guide-enhancement--photographed {
+  align-items: center;
+  gap: clamp(3rem, 6vw, 7rem);
+}
+.guide-enhancement__visual {
+  max-width: 32rem;
+  width: 100%;
+}
+.guide-enhancement__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.guide-enhancement--photographed .guide-copy {
+  margin-top: 1.5rem;
+}
+@media (max-width: 800px) {
+  .guide-enhancement__visual {
+    max-width: none;
+  }
+}

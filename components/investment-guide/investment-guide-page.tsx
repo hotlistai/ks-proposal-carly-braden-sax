@@ -36,14 +36,14 @@ export function InvestmentGuidePage() {
               <span>Wedding</span>
               <span>Investment Guide</span>
             </h1>
-            <p className="guide-hero__copy">
-              Live music. Thoughtful production. An atmosphere that feels
-              entirely yours.
-            </p>
+            <p className="guide-hero__copy">Luxury Sax + DJ Atmospheres</p>
           </div>
           <div className="guide-hero__footer">
             <p className="guide-eyebrow">For couples &amp; their planners</p>
-            <a className="guide-button" href="#investment">
+            <a
+              className="guide-button guide-button--explore"
+              href="#investment"
+            >
               Explore the investment <span aria-hidden="true">↓</span>
             </a>
           </div>
@@ -70,16 +70,25 @@ export function InvestmentGuidePage() {
             </p>
           </div>
         </div>
-        <dl className="guide-prices">
+        <section
+          className="guide-signature-summary"
+          aria-labelledby="signature-summary-title"
+        >
           <div>
-            <dt>
-              Signature <span>Cocktail hour + reception</span>
-            </dt>
-            <dd>
-              <small>Starting at</small>
-              {guide.primaryOffer.startingAt}
-            </dd>
+            <p className="guide-eyebrow">Your starting point</p>
+            <h3 id="signature-summary-title">Signature</h3>
+            <p className="guide-instrumentation">Saxophone + DJ</p>
+            <p className="guide-coverage">{guide.primaryOffer.coverage}</p>
           </div>
+          <p className="guide-price">
+            <small>Starting at</small>
+            {guide.primaryOffer.startingAt}
+          </p>
+        </section>
+        <h3 className="guide-eyebrow guide-addons-heading">
+          Add to your Signature
+        </h3>
+        <dl className="guide-prices">
           <div>
             <dt>
               Ceremony <span>Sound, microphones + music cueing</span>
@@ -101,7 +110,7 @@ export function InvestmentGuidePage() {
           </div>
           <div>
             <dt>
-              Drums <span>Live percussion enhancement</span>
+              Drums <span>Live percussion for your reception</span>
             </dt>
             <dd>
               <small>Starting at</small>
@@ -202,18 +211,24 @@ export function InvestmentGuidePage() {
           <p className="guide-eyebrow">03 / Make it your own</p>
           <h2 id="enhancements-title">A richer live layer.</h2>
         </div>
-        <article className="guide-enhancement">
-          <div>
-            <p className="guide-eyebrow">The elevated KNOX</p>
-            <h3>
-              Lux <em>/ Violin</em>
-            </h3>
-            <p className="guide-instrumentation">DJ + Saxophone + Violin</p>
+        <article className="guide-enhancement guide-enhancement--photographed">
+          <div className="guide-enhancement__visual">
+            <Image
+              src="/images/knox-violin.jpeg"
+              alt="KNOX violinists with their white electric violins"
+              width={5384}
+              height={7173}
+              className="guide-enhancement__photo"
+              sizes="(max-width: 800px) 100vw, 42vw"
+            />
           </div>
           <div>
+            <p className="guide-eyebrow">The elevated KNOX</p>
+            <h3>Violin</h3>
+            <p className="guide-instrumentation">Violin enhancement</p>
             <p className="guide-copy">
               Violin woven into your celebration adds warmth, emotion, and
-              presence. Choose a ceremony-only performance, or bring the Lux
+              presence. Choose a ceremony-only performance, or bring the violin
               experience to the full night.
             </p>
             <dl className="guide-addon-prices">
@@ -232,16 +247,26 @@ export function InvestmentGuidePage() {
             </p>
           </div>
         </article>
-        <article className="guide-enhancement">
+        <article className="guide-enhancement guide-enhancement--photographed">
+          <div className="guide-enhancement__visual">
+            <Image
+              src="/images/knox-drum.jpg"
+              alt="KNOX drummer at his drum kit"
+              width={5464}
+              height={7280}
+              className="guide-enhancement__photo"
+              sizes="(max-width: 800px) 100vw, 42vw"
+            />
+          </div>
           <div>
             <p className="guide-eyebrow">Bring the rhythm</p>
             <h3>Drums</h3>
-            <p className="guide-instrumentation">Live percussion enhancement</p>
-          </div>
-          <div>
+            <p className="guide-instrumentation">
+              Reception percussion enhancement
+            </p>
             <p className="guide-copy">
-              An added pulse for the dance floor. Live drums bring a fuller,
-              more energetic performance alongside the KNOX sound.
+              Live drums for your reception. An added pulse for the dance floor,
+              alongside the KNOX saxophone and DJ sound.
             </p>
             <dl className="guide-addon-prices">
               <div>
@@ -250,8 +275,8 @@ export function InvestmentGuidePage() {
               </div>
             </dl>
             <p className="guide-note">
-              Add drums to Signature or pair them with Lux for DJ, saxophone,
-              violin, and drums.
+              Add drums to Signature, or combine violin and drums with saxophone
+              and DJ for a fuller live sound.
             </p>
           </div>
         </article>
