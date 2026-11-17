@@ -349,10 +349,10 @@ export function InvestmentGuidePage() {
             className="guide-button guide-button--filled"
             href={guide.inquiry.href}
           >
-            {guide.inquiry.label} <span aria-hidden="true">↗</span>
+            {guide.inquiry.label}
           </a>
           <a className="guide-button" href={guide.cta.href}>
-            Prefer a conversation? Book a call <span aria-hidden="true">↗</span>
+            Prefer a conversation? Book a call
           </a>
         </div>
         <p className="guide-note">{guide.investmentNotes}</p>

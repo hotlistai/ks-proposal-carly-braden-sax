@@ -40,3 +40,7 @@ No client portal records or PR page source were modified. No inquiry messages we
 - No password added. The hero photo remains the existing collection poster while the owner selects a replacement; the draft duo-photo replacement was removed before publication.
 - Deployment: dpl_C9tqu84PuYLCwFWJi7nfnrxmPaqo, https://ks-proposal-carly-braden-a6gg7op3z-hotlist-ai.vercel.app. Previous custom-host deployment: dpl_DNDSJC3YXig2zgeVgcQVnrudNLq1.
 - Hosted build Ready; existing content tests pass with updated ceremony expectations. Desktop 1440px and mobile 390px visual review passed, including all images, the separated Signature summary, the oval button and pricing. Dependency audit findings remain unchanged.
+
+### Footer button cleanup
+
+Removed the diagonal arrow glyph from both footer CTAs at the owner's request. Both labels are now text-only, with the existing inquiry funnel and call links preserved. Deployment dpl_ChfmcF6SShTxAwkiYP4UtRmTPfYP is bound to details.knoxsignature.com. Hosted build and content checks passed.
