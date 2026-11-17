@@ -1,0 +1,505 @@
+/* Typography, palette, tracking and spacing follow pr.knoxsignature.com. */
+:root {
+  --ink: #090909;
+  --paper: #f3f1eb;
+  --font-display: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --tracking-label: 0.16em;
+}
+html,
+body {
+  background: var(--ink);
+  color: var(--paper);
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  line-height: 1.45;
+}
+.wedding-guide {
+  --line: rgb(243 241 235 / 18%);
+  --muted: rgb(243 241 235 / 72%);
+  background: var(--ink);
+}
+.wedding-guide * {
+  box-sizing: border-box;
+}
+.wedding-guide p,
+.wedding-guide h1,
+.wedding-guide h2,
+.wedding-guide h3,
+.wedding-guide dl,
+.wedding-guide dd {
+  margin: 0;
+}
+.wedding-guide a {
+  color: inherit;
+  text-decoration: none;
+}
+.wedding-guide a:focus-visible,
+.wedding-guide button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+.wedding-guide ::selection {
+  background: var(--paper);
+  color: var(--ink);
+}
+.wedding-guide h1,
+.wedding-guide h2,
+.guide-enhancement h3,
+.guide-prices dt,
+.guide-prices dd,
+.guide-price,
+.guide-addon-prices dd {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+.wedding-guide h2 {
+  font-size: clamp(3rem, 6.4vw, 7.8rem);
+  letter-spacing: -0.065em;
+  line-height: 0.94;
+}
+.guide-eyebrow,
+.guide-wordmark,
+.guide-instrumentation,
+.guide-inclusions h3 {
+  font-family: var(--font-sans);
+  font-size: clamp(0.59rem, 0.65vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.guide-eyebrow {
+  color: var(--muted);
+}
+.guide-wordmark {
+  font-size: clamp(0.66rem, 0.8vw, 0.78rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+.guide-section {
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.5rem, 6vw, 7rem);
+}
+.guide-paper {
+  --line: rgb(9 9 9 / 18%);
+  --muted: rgb(9 9 9 / 68%);
+  background: var(--paper);
+  color: var(--ink);
+}
+.guide-hero {
+  position: relative;
+  min-height: 100svh;
+  background: #151515;
+  isolation: isolate;
+}
+.guide-hero__image {
+  object-fit: cover;
+  object-position: 62% center;
+  filter: grayscale(1);
+  z-index: -2;
+}
+.guide-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 12%)),
+    linear-gradient(180deg, rgb(0 0 0 / 22%), transparent 40%, rgb(0 0 0 / 72%));
+}
+.guide-hero__overlay {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: clamp(1.5rem, 3.6vw, 4.5rem);
+}
+.guide-brand .guide-eyebrow {
+  margin-top: 0.85rem;
+}
+.guide-hero__main {
+  margin: auto 0;
+}
+.guide-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(4.4rem, 6.1vw, 6.9rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.91;
+}
+.guide-hero h1 span {
+  display: block;
+}
+.guide-hero h1 span + span {
+  margin-left: clamp(1.25rem, 5.2vw, 5rem);
+  font-style: italic;
+}
+.guide-hero__copy {
+  max-width: 31ch;
+  margin-top: 1.5rem !important;
+  color: rgb(243 241 235 / 82%);
+  font-size: clamp(1rem, 1.08vw, 1.15rem);
+  letter-spacing: -0.025em;
+  line-height: 1.42;
+}
+.guide-hero__footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.guide-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 2.75rem;
+  border: 1px solid rgb(243 241 235 / 45%);
+  padding: 1rem 1.2rem;
+  font-size: 0.63rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  transition:
+    background-color 240ms,
+    color 240ms;
+}
+.guide-button:hover,
+.guide-button--filled {
+  background: var(--paper);
+  color: var(--ink) !important;
+}
+.guide-button--filled:hover {
+  background: #d9d6cd;
+}
+.guide-overview {
+  padding: clamp(5rem, 10vw, 11rem) clamp(1.5rem, 10vw, 11rem);
+  scroll-margin-top: 1rem;
+}
+.guide-section-heading {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.65fr) minmax(0, 1.35fr);
+  gap: clamp(2rem, 8vw, 12rem);
+}
+.guide-section-heading h2 {
+  max-width: 16ch;
+}
+.guide-copy {
+  max-width: 48ch;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+}
+.guide-section-heading .guide-copy {
+  margin-top: 2rem;
+}
+.guide-prices {
+  margin-top: clamp(3rem, 6vw, 6rem) !important;
+}
+.guide-prices > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0;
+}
+.guide-prices dt {
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+.guide-prices dt span {
+  display: block;
+  margin-top: 0.55rem;
+  font: 400 0.85rem/1.4 var(--font-sans);
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+.guide-prices dd {
+  text-align: right;
+  font-size: clamp(1.85rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+.guide-prices small,
+.guide-price small {
+  display: block;
+  margin-bottom: 0.7rem;
+  font: 500 0.6rem/1.3 var(--font-sans);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.guide-note {
+  margin-top: 1.5rem !important;
+  max-width: 65ch;
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.guide-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+  gap: clamp(2.5rem, 5vw, 6rem);
+  align-items: center;
+}
+.guide-feature__media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  background: #151515;
+}
+.guide-caption {
+  margin-top: 1rem !important;
+}
+.guide-feature h2 {
+  margin: 1.5rem 0 0.8rem;
+  font-size: clamp(4rem, 5.25vw, 6.35rem);
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+.guide-instrumentation {
+  color: var(--muted);
+}
+.guide-feature .guide-copy {
+  margin-top: 1.5rem;
+}
+.guide-coverage {
+  max-width: 34ch;
+  margin-top: 1.25rem !important;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.guide-price {
+  margin-top: 2rem !important;
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+.guide-inclusions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem 6vw;
+  margin-top: clamp(4rem, 7vw, 7rem);
+}
+.guide-inclusions section {
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+}
+.guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.guide-list li {
+  padding: 0.45rem 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+.guide-ceremony {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(3rem, 9vw, 10rem);
+  align-items: center;
+}
+.guide-ceremony h2 {
+  margin-top: 1.5rem;
+}
+.guide-ceremony .guide-copy {
+  margin-top: 2rem;
+}
+.guide-ceremony .guide-list li {
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+}
+.guide-enhancement {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(3rem, 9vw, 10rem);
+  border-top: 1px solid var(--line);
+  margin-top: clamp(3rem, 6vw, 6rem);
+  padding-top: clamp(2rem, 4vw, 4rem);
+}
+.guide-enhancement h3 {
+  font-size: clamp(3.5rem, 5.25vw, 6.35rem);
+  letter-spacing: -0.065em;
+  line-height: 1;
+  margin: 1.5rem 0 1rem;
+}
+.guide-enhancement h3 em {
+  font-size: 0.7em;
+}
+.guide-addon-prices {
+  margin-top: 2rem !important;
+}
+.guide-addon-prices > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 1rem 0;
+}
+.guide-addon-prices dt {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.guide-addon-prices dd {
+  font-size: 2.4rem;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+.guide-production {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+.guide-setup-image {
+  width: 100%;
+  height: auto;
+  filter: grayscale(1);
+}
+.guide-production h2 {
+  font-size: clamp(3.4rem, 5.1vw, 6rem);
+  margin-top: 1.5rem;
+}
+.guide-production .guide-copy {
+  margin-top: 1.5rem;
+}
+.guide-film {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+.guide-film h2 {
+  margin-top: 1.5rem;
+}
+.guide-film .guide-copy {
+  margin-top: 2rem;
+}
+.guide-portrait-film {
+  width: min(100%, 360px);
+  justify-self: center;
+}
+.guide-closing {
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.guide-closing h2 {
+  margin-top: 2rem;
+  font-size: clamp(3.5rem, 8.7vw, 9rem);
+}
+.guide-closing > .guide-copy,
+.guide-closing > .guide-note {
+  margin: 2rem auto 0;
+}
+.guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.guide-footer-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: clamp(5rem, 10vw, 9rem);
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+@media (max-width: 800px) {
+  .guide-hero h1 {
+    font-size: clamp(3.2rem, 13vw, 5.4rem);
+    max-width: 14ch;
+  }
+  .guide-hero h1 span + span {
+    margin-left: clamp(1rem, 7vw, 3rem);
+  }
+  .guide-hero__footer {
+    align-items: start;
+    flex-direction: column;
+  }
+  .guide-section-heading,
+  .guide-feature,
+  .guide-ceremony,
+  .guide-enhancement,
+  .guide-production,
+  .guide-film {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+  .guide-inclusions {
+    gap: 2.5rem;
+  }
+  .guide-feature h2 {
+    font-size: clamp(4rem, 18vw, 7rem);
+  }
+  .guide-prices > div {
+    align-items: start;
+    gap: 1rem;
+  }
+  .guide-prices dt {
+    font-size: 1.9rem;
+  }
+  .guide-prices dt span {
+    max-width: 18ch;
+    font-size: 0.78rem;
+  }
+  .guide-prices dd {
+    font-size: clamp(1.35rem, 4.8vw, 2rem);
+  }
+  .guide-closing .guide-button {
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .guide-inclusions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .guide-button {
+    transition: none;
+  }
+}
+@media print {
+  .guide-hero,
+  .guide-hero__overlay {
+    min-height: 25rem;
+  }
+  .guide-section,
+  .guide-overview {
+    padding: 2rem;
+  }
+  .guide-film,
+  .guide-feature__media,
+  .guide-actions {
+    display: none;
+  }
+  .guide-feature,
+  .guide-section-heading {
+    grid-template-columns: 1fr;
+  }
+  .guide-prices > div,
+  .guide-inclusions section,
+  .guide-enhancement {
+    break-inside: avoid;
+  }
+}

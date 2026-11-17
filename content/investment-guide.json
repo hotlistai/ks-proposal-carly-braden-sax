@@ -110,5 +110,18 @@
     "copy": "Schedule a quick Atmosphere Review Call and we'll walk through your venue, timeline, and goals for the day.",
     "label": "Schedule an Atmosphere Review Call",
     "href": "https://cal.com/knoxsignature/atmospherereviewcall"
+  },
+  "enhancements": {
+    "violin": {
+      "ceremonyOnly": "$850",
+      "fullNight": "$1,200"
+    },
+    "drums": {
+      "startingAt": "$1,200"
+    }
+  },
+  "inquiry": {
+    "label": "Inquire about your date",
+    "href": "mailto:hello@knoxsignature.com?subject=Wedding%20investment%20inquiry"
   }
 }

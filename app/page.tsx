@@ -4,16 +4,16 @@ import { InvestmentGuidePage } from "@/components/investment-guide/investment-gu
 export const metadata: Metadata = {
   title: "Knox Signature Wedding Investment Guide",
   description:
-    "A public Knox Signature wedding investment guide for cocktail hour, reception, ceremony coverage, and atmosphere review calls.",
+    "Explore KNOX Signature wedding starting prices, cocktail hour and reception coverage, ceremony sound, violin, and live drum enhancements.",
   openGraph: {
     title: "Knox Signature Wedding Investment Guide",
-    description: "Cocktail hour, reception, ceremony coverage, and atmosphere review call details.",
+    description: "Wedding starting prices for Signature, ceremony coverage, violin, and live drums.",
     images: ["/ks-social-cover.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Knox Signature Wedding Investment Guide",
-    description: "Cocktail hour, reception, ceremony coverage, and atmosphere review call details.",
+    description: "Wedding starting prices for Signature, ceremony coverage, violin, and live drums.",
     images: ["/ks-social-cover.png"],
   },
 };

@@ -2,336 +2,344 @@ import Image from "next/image";
 import guide from "@/content/investment-guide.json";
 import { GlassVideoPreview } from "./glass-video-preview";
 
-type OfferSection = {
-  title: string;
-  items: string[];
-};
-
-type GuideVideoProps = {
-  label: string;
-  src: string;
-  poster?: string;
-  glassPreview?: boolean;
-};
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
+function ItemList({ items }: { items: string[] }) {
   return (
-    <p
-      className="mb-5 text-[11px] font-semibold uppercase"
-      style={{ letterSpacing: "0.32em", color: "rgba(255,255,255,0.4)" }}
-    >
-      {children}
-    </p>
-  );
-}
-
-function DashList({ items }: { items: string[] }) {
-  return (
-    <ul className="m-0 list-none p-0">
+    <ul className="guide-list">
       {items.map((item) => (
-        <li
-          key={item}
-          className="relative mb-3 pl-7 text-[15px] font-light"
-          style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.7 }}
-        >
-          <span className="absolute left-0" style={{ color: "rgba(255,255,255,0.25)" }}>
-            -
-          </span>
-          {item}
-        </li>
+        <li key={item}>{item}</li>
       ))}
     </ul>
   );
 }
 
-function GuideVideo({ label, src, poster, glassPreview = false }: GuideVideoProps) {
-  return (
-    <div>
-      <SectionLabel>{label}</SectionLabel>
-      {glassPreview && poster ? <GlassVideoPreview src={src} poster={poster} /> : null}
-      {!glassPreview || !poster ? (
-      <video
-        className="block w-full bg-black"
-        controls
-        playsInline
-        preload="metadata"
-        poster={poster}
-        style={{ border: "1px solid rgba(255,255,255,0.08)" }}
-      >
-        <source src={src} />
-        Your browser does not support the video tag.
-      </video>
-      ) : null}
-    </div>
-  );
-}
-
-function SnapshotGrid() {
-  return (
-    <section
-      className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-    >
-      <SectionLabel>Guide Snapshot</SectionLabel>
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {guide.snapshots.map((snapshot) => (
-          <div
-            key={snapshot.label}
-            className="h-full px-6 py-6"
-            style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)" }}
-          >
-            <p
-              className="text-[11px] font-semibold uppercase"
-              style={{ letterSpacing: "0.24em", color: "rgba(255,255,255,0.35)" }}
-            >
-              {snapshot.label}
-            </p>
-            <p
-              className="mt-4 font-medium"
-              style={{ color: "rgba(255,255,255,0.9)", lineHeight: 1.35, fontSize: "clamp(18px, 2vw, 24px)" }}
-            >
-              {snapshot.value}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function OfferSectionCard({ section }: { section: OfferSection }) {
-  return (
-    <div
-      className="h-full px-6 py-6"
-      style={{ background: "rgba(255,255,255,0.018)", border: "1px solid rgba(255,255,255,0.06)" }}
-    >
-      <h3 className="mb-5 text-[18px] font-semibold" style={{ color: "#ffffff", letterSpacing: "-0.01em" }}>
-        {section.title}
-      </h3>
-      <DashList items={section.items} />
-    </div>
-  );
-}
-
-function PrimaryOffer() {
-  return (
-    <section
-      id="investment"
-      className="mx-auto max-w-[1040px] px-9 py-[84px] md:px-[72px]"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-    >
-      <SectionLabel>{guide.primaryOffer.eyebrow}</SectionLabel>
-      <div
-        className="px-7 py-8 md:px-10 md:py-10"
-        style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.12)" }}
-      >
-        <div className="flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <h2
-              className="font-extrabold"
-              style={{
-                fontSize: "clamp(30px, 4vw, 48px)",
-                letterSpacing: "-0.04em",
-                lineHeight: 1,
-                color: "#ffffff",
-              }}
-            >
-              {guide.primaryOffer.title}
-            </h2>
-            <p className="mt-3 text-base text-white/80">{guide.primaryOffer.coverage}</p>
-            <p
-              className="mt-4 text-[12px] font-semibold uppercase"
-              style={{ letterSpacing: "0.24em", color: "rgba(255,255,255,0.42)" }}
-            >
-              Starting at
-            </p>
-          </div>
-          <p
-            className="font-extrabold"
-            style={{ fontSize: "clamp(38px, 5vw, 64px)", letterSpacing: "-0.055em", lineHeight: 0.95 }}
-          >
-            {guide.primaryOffer.startingAt}
-          </p>
-        </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          {guide.primaryOffer.sections.map((section) => (
-            <OfferSectionCard key={section.title} section={section} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ProductionBreak() {
-  return (
-    <section className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]">
-      <SectionLabel>Production & Design</SectionLabel>
-      <Image
-        src={guide.media.setupImage.src}
-        alt={guide.media.setupImage.alt}
-        width={1400}
-        height={900}
-        className="block h-auto w-full"
-        style={{ border: "1px solid rgba(255,255,255,0.08)" }}
-      />
-    </section>
-  );
-}
-
-function CeremonyCoverage() {
-  return (
-    <section
-      className="mx-auto max-w-[1040px] px-9 py-[84px] md:px-[72px]"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-    >
-      <div className="grid gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-start">
-        <div>
-          <h2
-            className="font-extrabold"
-            style={{ fontSize: "clamp(34px, 4vw, 54px)", letterSpacing: "-0.045em", lineHeight: 0.98 }}
-          >
-            {guide.ceremony.heading}
-          </h2>
-          <p
-            className="mt-5 font-extrabold"
-            style={{ fontSize: "clamp(36px, 5vw, 62px)", letterSpacing: "-0.055em", color: "#ffffff" }}
-          >
-            {guide.ceremony.addOnInvestment}
-          </p>
-        </div>
-        <div
-          className="px-7 py-7 md:px-8"
-          style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}
-        >
-          <DashList items={guide.ceremony.items} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function DifferenceSection() {
-  return (
-    <section
-      className="mx-auto max-w-[1040px] px-9 py-[84px] md:px-[72px]"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-    >
-      <SectionLabel>{guide.difference.title}</SectionLabel>
-      <p
-        className="max-w-[72ch] font-light"
-        style={{ fontSize: "clamp(20px, 2.1vw, 28px)", color: "rgba(255,255,255,0.82)", lineHeight: 1.55 }}
-      >
-        {guide.difference.copy}
-      </p>
-    </section>
-  );
-}
-
-function InvestmentNotes() {
-  return (
-    <section
-      className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-    >
-      <div
-        className="px-7 py-7"
-        style={{ background: "rgba(255,255,255,0.025)", borderLeft: "2px solid rgba(255,255,255,0.18)" }}
-      >
-        <SectionLabel>Investment Notes</SectionLabel>
-        <p className="m-0 max-w-[72ch] font-light" style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75 }}>
-          {guide.investmentNotes}
-        </p>
-      </div>
-    </section>
-  );
-}
-
-function NextSteps() {
-  return (
-    <section
-      className="mx-auto max-w-[1040px] px-9 py-[96px] md:px-[72px]"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-    >
-      <SectionLabel>{guide.cta.title}</SectionLabel>
-      <h2
-        className="max-w-[720px] font-extrabold"
-        style={{ fontSize: "clamp(34px, 4.8vw, 62px)", letterSpacing: "-0.05em", lineHeight: 0.98 }}
-      >
-        If this feels aligned with your vision, we would love to learn more.
-      </h2>
-      <p className="mt-7 max-w-[62ch] font-light" style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.75 }}>
-        {guide.cta.copy}
-      </p>
-      <a
-        href={guide.cta.href}
-        className="mt-9 inline-flex items-center justify-center px-7 py-4 text-[12px] font-semibold uppercase"
-        style={{
-          background: "#ffffff",
-          color: "#0a0a0a",
-          letterSpacing: "0.22em",
-          textDecoration: "none",
-        }}
-      >
-        {guide.cta.label}
-      </a>
-    </section>
-  );
-}
-
 export function InvestmentGuidePage() {
   return (
-    <main>
-      <Image
-        src={guide.media.bannerImage.src}
-        alt={guide.media.bannerImage.alt}
-        width={1920}
-        height={600}
-        priority
-        className="block h-auto w-full"
-      />
-      <section className="mx-auto max-w-[1040px] px-9 pb-10 pt-20 md:px-[72px]">
-        <p
-          className="mb-4 text-[10px] font-semibold uppercase"
-          style={{ letterSpacing: "4.5px", color: "rgba(255,255,255,0.4)" }}
-        >
-          {guide.brand}
+    <main className="wedding-guide">
+      <section className="guide-hero" aria-labelledby="guide-title">
+        <Image
+          className="guide-hero__image"
+          src="/images/collection-poster.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="guide-hero__overlay">
+          <header className="guide-brand">
+            <a href="https://pr.knoxsignature.com" className="guide-wordmark">
+              {guide.brand}
+            </a>
+            <p className="guide-eyebrow">Weddings · Dallas + Destination</p>
+          </header>
+          <div className="guide-hero__main">
+            <h1 id="guide-title">
+              <span>Wedding</span>
+              <span>Investment Guide</span>
+            </h1>
+            <p className="guide-hero__copy">
+              Live music. Thoughtful production. An atmosphere that feels
+              entirely yours.
+            </p>
+          </div>
+          <div className="guide-hero__footer">
+            <p className="guide-eyebrow">For couples &amp; their planners</p>
+            <a className="guide-button" href="#investment">
+              Explore the investment <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="guide-overview guide-paper"
+        id="investment"
+        aria-labelledby="overview-title"
+      >
+        <div className="guide-section-heading">
+          <p className="guide-eyebrow">The investment, at a glance</p>
+          <div>
+            <h2 id="overview-title">
+              One signature sound.
+              <br />
+              <em>Your kind of celebration.</em>
+            </h2>
+            <p className="guide-copy">
+              A starting point for your wedding plans. Begin with Signature,
+              then add ceremony coverage and the live instruments that feel
+              right for your day.
+            </p>
+          </div>
+        </div>
+        <dl className="guide-prices">
+          <div>
+            <dt>
+              Signature <span>Cocktail hour + reception</span>
+            </dt>
+            <dd>
+              <small>Starting at</small>
+              {guide.primaryOffer.startingAt}
+            </dd>
+          </div>
+          <div>
+            <dt>
+              Ceremony <span>Sound, microphones + music cueing</span>
+            </dt>
+            <dd>
+              <small>Add-on</small>
+              {guide.ceremony.addOnInvestment}
+            </dd>
+          </div>
+          <div>
+            <dt>
+              Violin <span>Ceremony only / full night</span>
+            </dt>
+            <dd>
+              <small>Add-on</small>
+              {guide.enhancements.violin.ceremonyOnly} /{" "}
+              {guide.enhancements.violin.fullNight}
+            </dd>
+          </div>
+          <div>
+            <dt>
+              Drums <span>Live percussion enhancement</span>
+            </dt>
+            <dd>
+              <small>Starting at</small>
+              {guide.enhancements.drums.startingAt}
+            </dd>
+          </div>
+        </dl>
+        <p className="guide-note">
+          Enhancements are added to your selected coverage. Final investment is
+          tailored to your venue, timeline, and event details.
         </p>
-        <h1
-          className="max-w-[760px] text-balance font-extrabold"
-          style={{
-            fontSize: "clamp(38px, 6vw, 68px)",
-            letterSpacing: "-0.045em",
-            lineHeight: 0.96,
-            color: "#ffffff",
-          }}
-        >
-          {guide.title}
-        </h1>
-        <div
-          className="mt-7 max-w-[66ch] space-y-5 font-light"
-          style={{ fontSize: "clamp(17px, 1.6vw, 20px)", color: "rgba(255,255,255,0.72)", lineHeight: 1.7 }}
-        >
-          {guide.intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+      </section>
+
+      <section
+        className="guide-signature guide-section"
+        id="signature"
+        aria-labelledby="signature-title"
+      >
+        <div className="guide-feature">
+          <div className="guide-feature__media">
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster={guide.media.firstVideo.poster}
+              aria-label="Watch Knox Signature perform"
+            >
+              <source src={guide.media.firstVideo.src} />
+              Your browser does not support the video tag.
+            </video>
+            <p className="guide-eyebrow guide-caption">
+              The original KNOX · Live piano, saxophone + DJ
+            </p>
+          </div>
+          <div className="guide-feature__copy">
+            <p className="guide-eyebrow">01 / The foundation</p>
+            <h2 id="signature-title">Signature</h2>
+            <p className="guide-instrumentation">Cocktail hour + reception</p>
+            <p className="guide-copy">
+              Live piano and saxophone welcome your guests. Curated DJ direction
+              and live saxophone carry the evening from dinner to the final
+              song.
+            </p>
+            <p className="guide-coverage">{guide.primaryOffer.coverage}</p>
+            <p className="guide-price">
+              <small>Starting at</small>
+              {guide.primaryOffer.startingAt}
+            </p>
+          </div>
+        </div>
+        <div className="guide-inclusions">
+          {guide.primaryOffer.sections.map((section) => (
+            <section key={section.title}>
+              <h3>{section.title}</h3>
+              <ItemList items={section.items} />
+            </section>
           ))}
         </div>
-        <div className="mt-12 max-w-[760px]">
-          <GuideVideo {...guide.media.firstVideo} />
+      </section>
+
+      <section
+        className="guide-ceremony guide-paper guide-section"
+        id="ceremony"
+        aria-labelledby="ceremony-title"
+      >
+        <div>
+          <p className="guide-eyebrow">02 / The first moment</p>
+          <h2 id="ceremony-title">Ceremony</h2>
+          <p className="guide-copy">
+            Every word heard. Every entrance considered. Discreet sound and
+            music direction for the moments that begin it all.
+          </p>
+          <p className="guide-price">
+            <small>Coverage add-on</small>
+            {guide.ceremony.addOnInvestment}
+          </p>
+          <p className="guide-note">
+            Add live violin for your ceremony for{" "}
+            {guide.enhancements.violin.ceremonyOnly}.
+          </p>
+        </div>
+        <div>
+          <h3 className="guide-eyebrow">Ceremony coverage includes</h3>
+          <ItemList items={guide.ceremony.items} />
+          <p className="guide-note">
+            Live violin is an additional enhancement; ceremony sound and
+            technical coverage are priced separately.
+          </p>
         </div>
       </section>
-      <SnapshotGrid />
-      <PrimaryOffer />
-      <ProductionBreak />
-      <CeremonyCoverage />
-      <section className="mx-auto max-w-[1040px] px-9 py-[72px] md:px-[72px]">
-        <div className="mx-auto max-w-[360px]">
-          <GuideVideo {...guide.media.secondVideo} />
+
+      <section
+        className="guide-enhancements guide-section"
+        id="enhancements"
+        aria-labelledby="enhancements-title"
+      >
+        <div className="guide-section-heading">
+          <p className="guide-eyebrow">03 / Make it your own</p>
+          <h2 id="enhancements-title">A richer live layer.</h2>
+        </div>
+        <article className="guide-enhancement">
+          <div>
+            <p className="guide-eyebrow">The elevated KNOX</p>
+            <h3>
+              Lux <em>/ Violin</em>
+            </h3>
+            <p className="guide-instrumentation">DJ + Saxophone + Violin</p>
+          </div>
+          <div>
+            <p className="guide-copy">
+              Violin woven into your celebration adds warmth, emotion, and
+              presence. Choose a ceremony-only performance, or bring the Lux
+              experience to the full night.
+            </p>
+            <dl className="guide-addon-prices">
+              <div>
+                <dt>Ceremony only</dt>
+                <dd>{guide.enhancements.violin.ceremonyOnly}</dd>
+              </div>
+              <div>
+                <dt>Full night</dt>
+                <dd>{guide.enhancements.violin.fullNight}</dd>
+              </div>
+            </dl>
+            <p className="guide-note">
+              Violin enhancement pricing is in addition to your selected
+              coverage.
+            </p>
+          </div>
+        </article>
+        <article className="guide-enhancement">
+          <div>
+            <p className="guide-eyebrow">Bring the rhythm</p>
+            <h3>Drums</h3>
+            <p className="guide-instrumentation">Live percussion enhancement</p>
+          </div>
+          <div>
+            <p className="guide-copy">
+              An added pulse for the dance floor. Live drums bring a fuller,
+              more energetic performance alongside the KNOX sound.
+            </p>
+            <dl className="guide-addon-prices">
+              <div>
+                <dt>Starting at</dt>
+                <dd>{guide.enhancements.drums.startingAt}</dd>
+              </div>
+            </dl>
+            <p className="guide-note">
+              Add drums to Signature or pair them with Lux for DJ, saxophone,
+              violin, and drums.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section
+        className="guide-production guide-paper guide-section"
+        aria-labelledby="production-title"
+      >
+        <Image
+          src={guide.media.setupImage.src}
+          alt={guide.media.setupImage.alt}
+          width={1400}
+          height={900}
+          className="guide-setup-image"
+        />
+        <div>
+          <p className="guide-eyebrow">Designed for the room</p>
+          <h2 id="production-title">
+            Considered.
+            <br />
+            <em>From every angle.</em>
+          </h2>
+          <p className="guide-copy">
+            A minimal white DJ command center, refined sound, and architectural
+            lighting. Every element supports the setting and the celebration.
+          </p>
+          <p className="guide-copy">
+            Your music planning session, site visit, and KNOX planning portal
+            keep the details connected from the first conversation to the final
+            song.
+          </p>
         </div>
       </section>
-      <DifferenceSection />
-      <InvestmentNotes />
-      <NextSteps />
+
+      <section
+        className="guide-film guide-section"
+        aria-labelledby="film-title"
+      >
+        <div>
+          <p className="guide-eyebrow">The atmosphere, in motion</p>
+          <h2 id="film-title">Feel the evening.</h2>
+          <p className="guide-copy">
+            A glimpse of the live energy, the quiet moments, and the dance floor
+            in between.
+          </p>
+        </div>
+        <div className="guide-portrait-film">
+          <GlassVideoPreview
+            src={guide.media.secondVideo.src}
+            poster={guide.media.secondVideo.poster}
+          />
+        </div>
+      </section>
+
+      <footer className="guide-closing guide-section" id="inquire">
+        <p className="guide-eyebrow">Your date. Your setting. Your sound.</p>
+        <h2>
+          Let’s shape
+          <br />
+          <em>your celebration.</em>
+        </h2>
+        <p className="guide-copy">
+          Share your date, venue, and the coverage you have in mind. We’ll
+          confirm availability and put together an investment tailored to your
+          plans.
+        </p>
+        <div className="guide-actions">
+          <a
+            className="guide-button guide-button--filled"
+            href={guide.inquiry.href}
+          >
+            {guide.inquiry.label} <span aria-hidden="true">↗</span>
+          </a>
+          <a className="guide-button" href={guide.cta.href}>
+            Prefer a conversation? Book a call <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p className="guide-note">{guide.investmentNotes}</p>
+        <div className="guide-footer-line">
+          <a href="https://pr.knoxsignature.com" className="guide-wordmark">
+            {guide.brand}
+          </a>
+          <p className="guide-eyebrow">
+            Wedding Investment Guide · Dallas + Destination
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
